@@ -65,6 +65,10 @@ Algoritmo FitDAM_Master
 						si edadUsuario>65 o edadUsuario<21 Entonces
 							cuota<-cuota-(cuota*0.15)
 						FinSi
+						si esEstudiante=1 Entonces
+								cuota<-cuota-(cuota*0.15)
+								Escribir "Descuento por estudiante del 15% aplicado"
+						FinSi
 						sociosActivos<-sociosActivos+1
 						recaudacionCuotas<-recaudacionCuotas+cuota
 						escribir "Cuota elegida correctamente, se le ha cobrado ",cuota," euros"
@@ -74,6 +78,10 @@ Algoritmo FitDAM_Master
 						si edadUsuario>65 o edadUsuario<21 Entonces
 							cuota<-cuota-(cuota*0.15)
 						FinSi
+						si esEstudiante=1 Entonces
+								cuota<-cuota-(cuota*0.15)
+								Escribir "Descuento por estudiante del 15% aplicado"
+						FinSi
 						sociosActivos<-sociosActivos+1
 						recaudacionCuotas<-recaudacionCuotas+cuota
 						escribir "Cuota elegida correctamente, se le ha cobrado ",cuota," euros"
@@ -82,6 +90,10 @@ Algoritmo FitDAM_Master
 						cuota<-90
 						si edadUsuario>65 o edadUsuario<21 Entonces
 							cuota<-cuota-(cuota*0.15)
+						FinSi
+						si esEstudiante=1 Entonces
+								cuota<-cuota-(cuota*0.15)
+								Escribir "Descuento por estudiante del 15% aplicado"
 						FinSi
 						sociosActivos<-sociosActivos+1
 						recaudacionCuotas<-recaudacionCuotas+cuota
