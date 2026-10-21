@@ -40,8 +40,46 @@ Algoritmo FitDAM_Master
 		
 		Segun opcionMenu Hacer
 			1:
-				// TODO: [Issue #2] Implementado por Developer 1
-				Escribir "[PENDIENTE] Caso 1 no integrado. Esperando revisión en Code Review."
+				egun opcionMenu Hacer
+				1:
+					Escribir "Seleccione su tipo de cuota"
+					Escribir "1.Mensual (35€)"
+					Escribir "2.Trimestral (90€)"
+					Escribir "3.Anual (300€)"
+					leer opcionCuota
+					Escribir "Introduzca edad"
+					leer edadUsuario
+					Mientras edadUsuario<=0 hacer
+						escribir "La edad no puede ser 0 o menor"
+						leer edadUsuario
+					FinMientras
+					
+					Segun opcionCuota
+						1:
+							escribir "Se le ha sumado 15€ por cuota de inscripción fija por matrícula" 
+							cuota<-50
+							si edadUsuario>65 o edadUsuario<21 Entonces
+								cuota<-cuota-(cuota*0.15)
+							FinSi
+							sociosActivos<-sociosActivos+1
+							recaudacionCuotas<-recaudacionCuotas+cuota
+							
+						2:
+							cuota<-90
+							si edadUsuario>65 o edadUsuario<21 Entonces
+								cuota<-cuota-(cuota*0.15)
+							FinSi
+							sociosActivos<-sociosActivos+1
+							recaudacionCuotas<-recaudacionCuotas+cuota
+							
+						3:
+							cuota<-300
+							si edadUsuario>65 o edadUsuario<21 Entonces
+								cuota<-cuota-(cuota*0.15)
+							FinSi
+							sociosActivos<-sociosActivos+1
+							recaudacionCuotas<-recaudacionCuotas+cuota
+					FinSegun
 				
 			2:
 				// TODO: [Issue #3] Implementado por Developer 2
