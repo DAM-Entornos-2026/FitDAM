@@ -1,6 +1,3 @@
-# FitDAM
-Software en PSeInt para la gestión integral de FitDAM. Incluye alta de socios con tarifas por edad, control de acceso por torno y aforo, reserva de clases con lista de espera, venta en tienda con IVA/cambio y balance de rentabilidad. Desarrollado con Scrumban en GitHub Projects. (279 caracteres)
-```
 Algoritmo FitDAM_Master
 	
 	// =========================================================================
@@ -41,8 +38,52 @@ Algoritmo FitDAM_Master
 		Segun opcionMenu Hacer
 			1:
 				// TODO: [Issue #2] Implementado por Developer 1
-				Escribir "[PENDIENTE] Caso 1 no integrado. Esperando revisión en Code Review."
+				Escribir "Seleccione su tipo de cuota"
+				Escribir "1.Mensual (35?)"
+				Escribir "2.Trimestral (90?)"
+				Escribir "3.Anual (300?)"
+				leer opcionCuota
+				mientras opcionCuota>3 o opcionCuota<1 Hacer
+					escribir "Cuota invalida, intentelo de nuevo"
+					leer opcionCuota
+				FinMientras
+				Escribir "Introduzca edad"
+				leer edadUsuario
+				Mientras edadUsuario<=0 hacer
+					escribir "La edad no puede ser 0 o menor"
+					leer edadUsuario
+				FinMientras
 				
+				Segun opcionCuota
+					1:
+						escribir "Se le ha sumado 15 euros por cuota de inscripción fija por matrícula" 
+						cuota<-50
+						si edadUsuario>65 o edadUsuario<21 Entonces
+							cuota<-cuota-(cuota*0.15)
+						FinSi
+						sociosActivos<-sociosActivos+1
+						recaudacionCuotas<-recaudacionCuotas+cuota
+						escribir "Cuota elegida correctamente, se le ha cobrado ",cuota," euros"
+						
+					2:
+						cuota<-90
+						si edadUsuario>65 o edadUsuario<21 Entonces
+							cuota<-cuota-(cuota*0.15)
+						FinSi
+						sociosActivos<-sociosActivos+1
+						recaudacionCuotas<-recaudacionCuotas+cuota
+						escribir "Cuota elegida correctamente, se le ha cobrado ",cuota," euros"
+						
+					3:
+						cuota<-90
+						si edadUsuario>65 o edadUsuario<21 Entonces
+							cuota<-cuota-(cuota*0.15)
+						FinSi
+						sociosActivos<-sociosActivos+1
+						recaudacionCuotas<-recaudacionCuotas+cuota
+						escribir "Cuota elegida correctamente, se le ha cobrado ",cuota," euros"
+						
+				FinSegun
 			2:
 				// TODO: [Issue #3] Implementado por Developer 2
 				Escribir "[PENDIENTE] Caso 2 no integrado. Esperando revisión en Code Review."
@@ -69,4 +110,3 @@ Algoritmo FitDAM_Master
 	Hasta Que opcionMenu = 0
 
 FinAlgoritmo
-```
