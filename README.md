@@ -40,7 +40,7 @@ Algoritmo FitDAM_Master
 		
 		Segun opcionMenu Hacer
 			1:
-				egun opcionMenu Hacer
+				Segun opcionMenu Hacer
 				1:
 					Escribir "Seleccione su tipo de cuota"
 					Escribir "1.Mensual (35€)"
