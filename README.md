@@ -43,9 +43,9 @@ Algoritmo FitDAM_Master
 			1:
 				// TODO: [Issue #2] Implementado por Developer 1
 				Escribir "Seleccione su tipo de cuota"
-				Escribir "1.Mensual (35?)"
-				Escribir "2.Trimestral (90?)"
-				Escribir "3.Anual (300?)"
+				Escribir "1.Mensual (35 euros)"
+				Escribir "2.Trimestral (90 euros)"
+				Escribir "3.Anual (300 euros)"
 				leer opcionCuota
 				mientras opcionCuota>3 o opcionCuota<1 Hacer
 					escribir "Cuota invalida, intentelo de nuevo"
@@ -53,7 +53,7 @@ Algoritmo FitDAM_Master
 				FinMientras
 				Escribir "Introduzca edad"
 				leer edadUsuario
-				Mientras edadUsuario<=0 hacer
+				Mientras edadUsuario<1 hacer
 					escribir "La edad no puede ser 0 o menor"
 					leer edadUsuario
 				FinMientras
