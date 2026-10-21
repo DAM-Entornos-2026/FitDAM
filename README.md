@@ -9,12 +9,15 @@ Algoritmo FitDAM_Master
 	
 	// Valores iniciales según plantilla maestra
 	sociosActivos <- 0
+	sociosRegistrados <- 0
 	capacidadGimnasio <- 50
 	taquillasOcupadas <- 0
 	recaudacionCuotas <- 0.0
 	recaudacionClases <- 0.0
 	recaudacionSuplementos <- 0.0
 	alertaAforoGimnasio <- Falso
+	plazasClase <- 10
+	listaEspera <- 0
 	
 	// =========================================================================
 	// BUCLE PRINCIPAL DE NAVEGACIÓN Y MENÚ
