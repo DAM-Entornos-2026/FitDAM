@@ -11,6 +11,7 @@ Algoritmo FitDAM_Master
 	sociosActivos <- 0
 	sociosRegistrados <- 0
 	capacidadGimnasio <- 50
+	aforoMaximo <- 30
 	taquillasOcupadas <- 0
 	recaudacionCuotas <- 0.0
 	recaudacionClases <- 0.0
